@@ -8,9 +8,7 @@ URL:		http://foobnix.com
 License:	GNU GPL v3 or later
 Source: 	%{name}_%{version}-0l.tar.gz
 Summary:	Simple and Powerful music player for Linux
-Summary(ru): 	Простой и мощный плеер музыки для ОС Linux
-Group:		Multimedia/Sound/Players
-Packager:	Sergey Zhemoitel <djam5@ya.ru>
+Group:		Sound
 BuildRoot:	%{_tmppath}/%{name}_%{version}-build
 
 BuildRequires: python-chardet, pygtk2.0, pygtk2.0-libglade, mutagen, python-simplejson, python-setuptools 
@@ -29,12 +27,8 @@ Simple and Powerful music player for Linux
 All best features in one player. Foobnix small, fast, customizable, powerful
 music player with user-friendly interface.
 
-%description -l ru
-Простой и мощный плеер музыки для ОС Linux
-
 %prep
 %setup -q -n %{name}_%{version}-%{rel}
-
 
 %build
 
@@ -57,4 +51,3 @@ PREFIX=%{buildroot}/usr make install
 
 %clean
 rm -rf %{buildroot}
-
