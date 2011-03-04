@@ -40,7 +40,7 @@ PREFIX=%{buildroot}/usr make install
 %defattr (-,root,root,0755)
 %doc README COPYING CHANGELOG
 %{_bindir}/%{name}
-%{_libdir}/python%{pyver}/site-packages/%{name}*
+%{_libdir}/python%{pyver}/site-packages/*
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/%{name}/*
 %{_datadir}/pixmaps/%{name}*
