@@ -79,12 +79,6 @@ cp %{buildroot}%{_datadir}/pixmaps/%{name}.png \
 %doc README COPYING CHANGELOG
 %{_bindir}/%{name}
 %{python_sitearch}/*
-#%if %_lib == lib64 
-#%{_libdir}/python???
-#%else
-#%{_libdir}/python%{pyver}/site-packages/*
-#%endif
-#%{_libdir}/python%{pyver}/site-packages/*
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/%{name}/*
 %{_datadir}/icons/hicolor/64x64/apps/%{name}.*
