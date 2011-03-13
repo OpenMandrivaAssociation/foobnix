@@ -78,10 +78,11 @@ cp %{buildroot}%{_datadir}/pixmaps/%{name}.png \
 %defattr (-,root,root,0755)
 %doc README COPYING CHANGELOG
 %{_bindir}/%{name}
+%{python_sitearch}/*
 #%if %_lib == lib64 
 #%{_libdir}/python???
 #%else
-%{_libdir}/python%{pyver}/site-packages/*
+#%{_libdir}/python%{pyver}/site-packages/*
 #%endif
 #%{_libdir}/python%{pyver}/site-packages/*
 %{_datadir}/applications/%{name}.desktop
