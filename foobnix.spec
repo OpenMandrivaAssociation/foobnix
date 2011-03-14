@@ -1,5 +1,5 @@
 %define	PYVER	`python -c "import sys; print sys.version[:3]"`
-%define	rel	7
+%define	rel	9
 
 Name:		foobnix
 Version: 	0.2.5
