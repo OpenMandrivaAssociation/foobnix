@@ -1,15 +1,15 @@
 %define	PYVER	`python -c "import sys; print sys.version[:3]"`
-%define	rel	9
+%define	rel	1
 
 Name:		foobnix
-Version: 	0.2.5
-Release: 	%mkrel %rel
+Version: 	2.5.10
+Release: 	%mkrel 1
 URL:		http://foobnix.com
 License:	GNU GPL v3 or later
-Source:		https://launchpad.net/~foobnix-player/+archive/foobnix/+files/%{name}_%{version}-%{rel}m.tar.gz
+Source:		https://launchpad.net/~foobnix-player/+archive/foobnix/+files/%{name}_%{version}m.tar.gz
 #Source: 	%{name}_%{version}-%{rel}m.tar.gz
 Summary:	Simple and Powerful music player for Linux
-Group:		Sound
+Group:		Multimedia
 BuildRoot:	%{_tmppath}/%{name}_%{version}-build
 
 BuildRequires: python-chardet, pygtk2.0, pygtk2.0-libglade, mutagen, python-simplejson, python-setuptools 
@@ -28,8 +28,7 @@ All best features in one player. Foobnix small, fast, customizable, powerful
 music player with user-friendly interface.
 
 %prep
-%setup -q -n %{name}_%{version}-%{rel}
-
+%setup -q -n %{name}_%{version}
 
 %build
 
@@ -37,37 +36,11 @@ music player with user-friendly interface.
 rm -rf %{buildroot}
 PREFIX=%{buildroot}/usr make install
 
-
-# Mandriva Desktop Main file
-mkdir -p %{buildroot}{%{_icons48dir},%{_desktopdir}}
-
-cat > %{buildroot}/%{_desktopdir}/%{name}.desktop << EOF
-[Desktop Entry]
-Name=Foobnix
-GenericName=Music Player
-GenericName[ru]=Плеер музыки
-X-GNOME-FullName=Foobnix Music Player
-Comment=Simple and Powerful player for Linux
-Comment[ru]=Простой и мощный плеер для Linux
-Comment[uk]=Простий і потужний плеєр для Linux
-Exec=%{name} %U
-Icon=%{name}.png
-StartupNotify=true
-Terminal=false
-Type=Application
-X-GNOME-DocPath=foobnix/foobnix.xml
-Categories=GNOME;GTK;AudioVideo;Player;X-MandrivaLinux-CrossDesktop;X-MandrivaLinux-Multimedia-Video;
-MimeType=application/x-ogg;application/ogg;audio/x-vorbis+ogg;audio/x-scpls;audio/x-mp3;audio/x-mpeg;audio/mpeg;audio/x-mpegurl;audio/x-flac;x-content/audio;
-EOF
-# end Mandriva Desktop Main
-
-# Mandriva dirty-fix the Python bug for x86_64 patch lib64
 %if "%{?_lib}" == "lib64" 
 mkdir -p %{buildroot}%{python_sitearch}/
 cp -r %{buildroot}%{python_sitelib}/ %{buildroot}%{py_platlibdir}/
 rm -r %{buildroot}%{python_sitelib}/
 %endif
-# end Mandriva dirty-fix
 
 # icons fix
 mkdir -p %{buildroot}%{_icons64dir}/
@@ -92,6 +65,9 @@ cp %{buildroot}%{_datadir}/pixmaps/%{name}.png \
 %{_datadir}/locale/ru/LC_MESSAGES/%{name}.*
 %{_datadir}/locale/pl/LC_MESSAGES/%{name}.*
 %{_datadir}/locale/zh_CN/LC_MESSAGES/%{name}.*
+%{_datadir}/locale/en_GB/LC_MESSAGES/%{name}.*
+%{_datadir}/locale/pt/LC_MESSAGES/%{name}.*
+%{_datadir}/locale/de/LC_MESSAGES/%{name}.*
 
 %clean
 rm -rf %{buildroot}
