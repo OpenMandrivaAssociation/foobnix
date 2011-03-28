@@ -9,7 +9,7 @@ License:	GNU GPL v3 or later
 Source:		https://launchpad.net/~foobnix-player/+archive/foobnix/+files/%{name}_%{version}m.tar.gz
 #Source: 	%{name}_%{version}-%{rel}m.tar.gz
 Summary:	Simple and Powerful music player for Linux
-Group:		Multimedia
+Group:		Sound
 BuildRoot:	%{_tmppath}/%{name}_%{version}-build
 
 BuildRequires: python-chardet, pygtk2.0, pygtk2.0-libglade, mutagen, python-simplejson, python-setuptools 
