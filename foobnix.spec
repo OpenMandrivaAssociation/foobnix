@@ -2,7 +2,7 @@
 %define	rel	1
 
 Name:		foobnix
-Version: 	2.5.10
+Version: 	2.5.14
 Release: 	%mkrel 1
 URL:		http://foobnix.com
 License:	GNU GPL v3 or later
@@ -54,7 +54,7 @@ cp %{buildroot}%{_datadir}/pixmaps/%{name}.png \
 %{python_sitearch}/*
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/%{name}/*
-#%{_datadir}/icons/hicolor/64x64/apps/%{name}*
+%{_datadir}/icons/hicolor/64x64/apps/%{name}*
 %{_datadir}/pixmaps/%{name}*
 %{_datadir}/pixmaps/theme/cat.jpg
 %{_datadir}/pixmaps/theme/flower.jpg
@@ -68,6 +68,9 @@ cp %{buildroot}%{_datadir}/pixmaps/%{name}.png \
 %{_datadir}/locale/en_GB/LC_MESSAGES/%{name}.*
 %{_datadir}/locale/pt/LC_MESSAGES/%{name}.*
 %{_datadir}/locale/de/LC_MESSAGES/%{name}.*
+%{_datadir}/locale/by/LC_MESSAGES/%{name}.*
+%{_datadir}/locale/fr/LC_MESSAGES/%{name}.*
+%{_datadir}/locale/tr/LC_MESSAGES/%{name}.*
 
 %clean
 rm -rf %{buildroot}
