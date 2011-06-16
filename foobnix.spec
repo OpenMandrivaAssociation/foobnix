@@ -2,7 +2,7 @@
 %define	rel	1
 
 Name:		foobnix
-Version: 	2.5.14
+Version: 	2.5.16
 Release: 	%mkrel 1
 URL:		http://foobnix.com
 License:	GNU GPL v3 or later
@@ -58,6 +58,7 @@ cp %{buildroot}%{_datadir}/pixmaps/%{name}.png \
 %{_datadir}/pixmaps/%{name}*
 %{_datadir}/pixmaps/theme/cat.jpg
 %{_datadir}/pixmaps/theme/flower.jpg
+%{_datadir}/pixmaps/vk.png
 %{_mandir}/man1/%{name}*
 %{_datadir}/locale/es/LC_MESSAGES/%{name}.*
 %{_datadir}/locale/it/LC_MESSAGES/%{name}.*
@@ -68,7 +69,7 @@ cp %{buildroot}%{_datadir}/pixmaps/%{name}.png \
 %{_datadir}/locale/en_GB/LC_MESSAGES/%{name}.*
 %{_datadir}/locale/pt/LC_MESSAGES/%{name}.*
 %{_datadir}/locale/de/LC_MESSAGES/%{name}.*
-%{_datadir}/locale/by/LC_MESSAGES/%{name}.*
+#%{_datadir}/locale/by/LC_MESSAGES/%{name}.*
 %{_datadir}/locale/fr/LC_MESSAGES/%{name}.*
 %{_datadir}/locale/tr/LC_MESSAGES/%{name}.*
 
