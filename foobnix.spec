@@ -16,6 +16,7 @@ BuildRequires: python-chardet, pygtk2.0, pygtk2.0-libglade, mutagen, python-simp
 BuildRequires: gstreamer0.10-plugins-good, gstreamer0.10-plugins-ugly, gstreamer0.10-ffmpeg, gstreamer0.10-plugins-bad
 BuildRequires: gstreamer0.10-python, gettext, make, fuseiso
 BuildRequires: python-keybinder
+Requires:	python-webkitgtk
 
 Requires: python-chardet, python-setuptools, python-simplejson, mutagen
 Requires: gstreamer0.10-plugins-good, gstreamer0.10-python
