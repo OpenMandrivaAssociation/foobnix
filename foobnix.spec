@@ -55,7 +55,7 @@ cp %{buildroot}%{_datadir}/pixmaps/%{name}.png \
 %{python_sitearch}/*
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/%{name}/*
-%{_datadir}/icons/hicolor/64x64/apps/%{name}.png
+#%{_datadir}/icons/hicolor/64x64/apps/%{name}.png
 %{_datadir}/pixmaps/%{name}*
 %{_datadir}/pixmaps/theme/cat.jpg
 %{_datadir}/pixmaps/theme/flower.jpg
