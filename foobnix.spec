@@ -73,7 +73,7 @@ cp %{buildroot}%{_datadir}/pixmaps/%{name}.png \
 #%{_datadir}/locale/by/LC_MESSAGES/%{name}.*
 %{_datadir}/locale/fr/LC_MESSAGES/%{name}.*
 %{_datadir}/locale/tr/LC_MESSAGES/%{name}.*
-
+%{_datadir}/locale/bg/LC_MESSAGES/%{name}.*
 %clean
 rm -rf %{buildroot}
 
