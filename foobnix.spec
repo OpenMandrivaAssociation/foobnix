@@ -15,7 +15,11 @@ BuildRoot:	%{_tmppath}/%{name}_%{version}-build
 BuildRequires: python-chardet, pygtk2.0, pygtk2.0-libglade, mutagen, python-simplejson, python-setuptools 
 BuildRequires: gstreamer0.10-plugins-good, gstreamer0.10-plugins-ugly, gstreamer0.10-ffmpeg, gstreamer0.10-plugins-bad
 BuildRequires: gstreamer0.10-python, gettext, make, fuseiso
+%if %arch x86_64 
 BuildRequires: python-keybinder
+%else
+BuildRequires: keybinder
+%endif
 Requires:	python-webkitgtk
 
 Requires: python-chardet, python-setuptools, python-simplejson, mutagen
