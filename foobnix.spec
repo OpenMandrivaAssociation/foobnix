@@ -2,7 +2,7 @@
 %define	rel	1
 
 Name:		foobnix
-Version: 	2.5.30
+Version: 	2.5.34
 Release: 	%mkrel 1
 URL:		http://foobnix.com
 License:	GNU GPL v3 or later
@@ -15,7 +15,7 @@ BuildRoot:	%{_tmppath}/%{name}_%{version}-build
 BuildRequires: python-chardet, pygtk2.0, pygtk2.0-libglade, mutagen, python-simplejson, python-setuptools 
 BuildRequires: gstreamer0.10-plugins-good, gstreamer0.10-plugins-ugly, gstreamer0.10-ffmpeg, gstreamer0.10-plugins-bad
 BuildRequires: gstreamer0.10-python, gettext, make, fuseiso
-%ifarch x86_64 
+%ifarch x86_64
 BuildRequires: keybinder
 %else
 BuildRequires: python-keybinder
