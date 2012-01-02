@@ -64,6 +64,7 @@ cp %{buildroot}%{_datadir}/pixmaps/%{name}.png \
 %{_datadir}/pixmaps/theme/cat.jpg
 %{_datadir}/pixmaps/theme/flower.jpg
 %{_datadir}/pixmaps/vk.png
+%{_datadir}/pixmaps/theme/winter.jpg
 %{_mandir}/man1/%{name}*
 %{_datadir}/locale/es/LC_MESSAGES/%{name}.*
 %{_datadir}/locale/it/LC_MESSAGES/%{name}.*
@@ -78,6 +79,7 @@ cp %{buildroot}%{_datadir}/pixmaps/%{name}.png \
 %{_datadir}/locale/fr/LC_MESSAGES/%{name}.*
 %{_datadir}/locale/tr/LC_MESSAGES/%{name}.*
 %{_datadir}/locale/bg/LC_MESSAGES/%{name}.*
+%{_datadir}/locale/ca/LC_MESSAGES/foobnix.mo
 %clean
 rm -rf %{buildroot}
 
