@@ -2,7 +2,7 @@
 %define	rel	1
 
 Name:		foobnix
-Version: 	2.5.34
+Version: 	2.5.35
 Release: 	%mkrel 1
 URL:		http://foobnix.com
 License:	GNU GPL v3 or later
