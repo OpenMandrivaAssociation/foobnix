@@ -59,7 +59,7 @@ cp %{buildroot}%{_datadir}/pixmaps/%{name}.png \
 %{python_sitearch}/*
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/%{name}/*
-#%{_datadir}/icons/hicolor/64x64/apps/%{name}.png
+%{_datadir}/icons/hicolor/64x64/apps/%{name}.png
 %{_datadir}/pixmaps/%{name}*
 %{_datadir}/pixmaps/theme/cat.jpg
 %{_datadir}/pixmaps/theme/flower.jpg
@@ -80,6 +80,9 @@ cp %{buildroot}%{_datadir}/pixmaps/%{name}.png \
 %{_datadir}/locale/tr/LC_MESSAGES/%{name}.*
 %{_datadir}/locale/bg/LC_MESSAGES/%{name}.*
 %{_datadir}/locale/ca/LC_MESSAGES/foobnix.mo
+%{_datadir}/locale/et/LC_MESSAGES/foobnix.mo
+%{_datadir}/locale/pt_BR/LC_MESSAGES/foobnix.mo
+
 %clean
 rm -rf %{buildroot}
 
