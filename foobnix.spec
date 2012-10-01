@@ -20,6 +20,7 @@ BuildRequires: keybinder
 %else
 BuildRequires: python-keybinder
 %endif
+
 Requires:	python-webkitgtk
 
 Requires: python-chardet, python-setuptools, python-simplejson, mutagen
