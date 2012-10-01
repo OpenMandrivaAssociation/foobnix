@@ -3,7 +3,7 @@
 
 Name:		foobnix
 Version: 	2.6.01
-Release: 	%mkrel 1
+Release: 	%mkrel 2
 URL:		http://foobnix.com
 License:	GNU GPL v3 or later
 Source:		https://launchpad.net/~foobnix-player/+archive/foobnix/+files/%{name}_%{version}m.tar.gz
