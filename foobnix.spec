@@ -1,44 +1,15 @@
 %define debug_package %{nil}
 
 %define	PYVER	`python -c "import sys; print sys.version[:3]"`
-%define	rel	1
 
 Name:		foobnix
-Version: 	2.6.03
-Release: 	2
+Version: 	3.2.1
+Release: 	1
 URL:		http://foobnix.com
 License	:	GPLv3 
-Source:		https://launchpad.net/~foobnix-player/+archive/foobnix/+files/%{name}_%{version}m.tar.gz
+Source:		https://github.com/foobnix/foobnix/archive/%{version}/%{name}-%{version}.tar.gz
 Summary:		Simple and Powerful music player for Linux
 Group:		Sound
-
-
-BuildRequires: python-chardet, 
-BuildRequires: pygtk2.0, 
-BuildRequires: pygtk2.0-libglade, 
-BuildRequires: mutagen, 
-BuildRequires: python-simplejson, 
-BuildRequires: python-setuptools 
-BuildRequires: gstreamer0.10-plugins-good, 
-BuildRequires: gstreamer0.10-plugins-ugly, 
-BuildRequires: gstreamer0.10-ffmpeg, 
-BuildRequires: gstreamer0.10-plugins-bad
-BuildRequires: gstreamer0.10-python, 
-BuildRequires: gettext, 
-BuildRequires: make, 
-BuildRequires: fuseiso
-BuildRequires: keybinder
-
-
-Requires: python-webkitgtk
-Requires: python-chardet, 
-Requires: python-setuptools, 
-Requires: python-simplejson, 
-Requires: mutagen
-Requires: gstreamer0.10-plugins-good, 
-Requires: gstreamer0.10-python
-Requires: gstreamer0.10-ffmpeg, 
-Requires: gstreamer0.10-plugins-ugly
 
 %description 
 Simple and Powerful music player for Linux
@@ -46,13 +17,27 @@ Simple and Powerful music player for Linux
 All best features in one player. Foobnix small, fast, customizable, powerful
 music player with user-friendly interface.
 
+
+BuildRequires: pkgconfig(python)
+BuildRequires: pkgconfig(gtk+-3.0)
+BuildRequires: python3dist(simplejson)
+BuildRequires: python3dist(mutagen)
+BuildRequires: python3dist(pylast)
+
+Requires: python
+Requires: python3dist(simplejson)
+Requires: python3dist(mutagen)
+Requires: python3dist(pylast)
+
+
 %prep
-%setup -q -n %{name}_%{version}
+%setup -q -n %{name}-%{version}
 
 %build
+%make_build
 
 %install
-PREFIX=%{buildroot}/usr make install
+%make_install
 
 %if "%{?_lib}" == "lib64" 
 mkdir -p %{buildroot}%{python_sitearch}/
