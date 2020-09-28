@@ -39,21 +39,6 @@ Requires: python3dist(pylast)
 %install
 %make_install
 
-%if "%{?_lib}" == "lib64" 
-mkdir -p %{buildroot}%{python_sitearch}/
-cp -r %{buildroot}%{python_sitelib}/ %{buildroot}%{py_platlibdir}/
-rm -r %{buildroot}%{python_sitelib}/
-%endif
-
-# icons fix
-mkdir -p %{buildroot}%{_icons64dir}/
-cp %{buildroot}%{_datadir}/pixmaps/%{name}.png \
-%{buildroot}%{_icons64dir}/
-#permissions
-chmod a+x %{buildroot}%{_libdir}/python2.7/site-packages/foobnix/thirdparty/google/{browser,__init__,search}.py
-chmod a+x %{buildroot}%{_libdir}/python2.7/site-packages/foobnix/thirdparty/mutagen/__init__.py
-chmod a+x %{buildroot}%{_libdir}/python2.7/site-packages/foobnix/preferences/preferences_window.py
-
 %find_lang %{name}
 
 %files -f %{name}.lang
