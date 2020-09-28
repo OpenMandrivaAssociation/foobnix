@@ -46,7 +46,7 @@ Requires: python3dist(pylast)
 %{_datadir}/foobnix/images/foobnix*
 %{_datadir}/foobnix/images/theme/*
 %{_datadir}/foobnix/images/vk-small.png
-%{_datadir}/Dfoobnix/images/vk.png
+%{_datadir}/foobnix/images/vk.png
 %{_datadir}/foobnix/radio/*
 %{_datadir}/pixmaps/foobnix.png
 %{_mandir}/man1/foobnix.1.*
