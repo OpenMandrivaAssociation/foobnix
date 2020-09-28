@@ -34,11 +34,10 @@ Requires: python3dist(pylast)
 %setup -q -n %{name}-%{version}
 
 %build
-%make_build
+%{__python} setup.py build
 
 %install
-%make_install
-
+%{__python} setup.py install --root %{buildroot}
 %find_lang %{name}
 
 %files -f %{name}.lang
