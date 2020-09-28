@@ -41,18 +41,7 @@ Requires: python3dist(pylast)
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc README COPYING CHANGELOG
-%{_bindir}/%{name}
-%{python_sitearch}/*
-%{_datadir}/applications/%{name}.desktop
-%{_datadir}/%{name}/*
-#{_datadir}/icons/hicolor/64x64/apps/%{name}.png
-%{_datadir}/pixmaps/%{name}*
-%{_datadir}/pixmaps/theme/cat.jpg
-%{_datadir}/pixmaps/theme/flower.jpg
-%{_datadir}/pixmaps/vk.png
-%{_datadir}/pixmaps/theme/winter.jpg
-%{_mandir}/man1/%{name}*
+
 
 
 
