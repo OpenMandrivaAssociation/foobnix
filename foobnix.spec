@@ -3,7 +3,7 @@
 Name:		foobnix
 Version: 	3.2.1
 Release: 	3
-URL:		http://foobnix.com
+URL:		https://foobnix.com
 License	:	GPLv3 
 Source:		https://github.com/foobnix/foobnix/archive/%{version}/%{name}-%{version}.tar.gz
 Summary:	Simple and Powerful music player for Linux
